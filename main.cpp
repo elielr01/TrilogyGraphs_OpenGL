@@ -55,6 +55,9 @@ void drawBar( float x_coordinate, float z_coordinate,float height, float red, fl
     // This is a constant square size defined for our bars
     float square_base_size = 0.25;
     
+    // We recalculate the height because y axis goes from -1 to 1
+    height = (height * 2.0) - 1.0;
+    
     glBegin(GL_QUADS);        // Draw the bar using QUADS
     glColor3f(red,green,blue);    // Color Blue
     
